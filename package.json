@@ -1,0 +1,24 @@
+{
+  "name": "cordova-background-geo",
+  "version": "0.0.1",
+  "description": "Test",
+  "cordova": {
+    "id": "cordova-background-geo",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://pansetta.crispybacon.it/mobile/cordova-background-geolocation"
+  },
+  "keywords": [],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Test",
+  "license": "Apache-2.0"
+}
