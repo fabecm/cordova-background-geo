@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-michele-mona" version="0.0.1">
-    <name>Mona</name>
-    <description>Cordova Device Plugin</description>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-background-geo" version="0.0.1">
+    <name>OpenNative</name>
+    <description>Open native activity</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,device</keywords>
+    <author>Brusso Russo</author>
+    <keywords>cordova,opennative</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
     <js-module src="www/mona.js" name="mona">
         <clobbers target="mona" />
     </js-module>
