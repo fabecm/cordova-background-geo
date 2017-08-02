@@ -1,0 +1,11 @@
+repositories{    
+  jcenter()
+  flatDir{
+      dirs 'src/android/libs'
+   }
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services-location:+'
+    compile(name:'tslocationmanager', ext:'aar')
+}

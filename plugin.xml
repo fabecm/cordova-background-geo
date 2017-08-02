@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-michele-mona" version="0.0.1">
+    <name>Mona</name>
+    <description>Cordova Device Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    <js-module src="www/mona.js" name="mona">
+        <clobbers target="mona" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BackgroundGeo">
+                <param name="android-package" value="it.crispybacon.backgroundgeo.BackgroundGeo"/>
+            </feature>
+        </config-file>
+        <resource-file src="src/android/libs/PluginLocationMyCampyAndroid.aar" target="src/android/libs/PluginLocationMyCampyAndroid.aar" />
+    </platform>
+</plugin>
