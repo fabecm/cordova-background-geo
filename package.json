@@ -1,11 +1,12 @@
 {
   "name": "cordova-background-geo",
   "version": "0.0.1",
-  "description": "Test",
+  "description": "Cordova Background Geolocation",
   "cordova": {
     "id": "cordova-background-geo",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "repository": {
@@ -19,6 +20,6 @@
       "version": ">=3.0.0"
     }
   ],
-  "author": "Test",
+  "author": "CrispyBacon",
   "license": "Apache-2.0"
 }

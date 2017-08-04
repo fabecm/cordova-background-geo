@@ -1,8 +1,8 @@
 module.exports = {
-    start: function () {
-        cordova.exec(console.log, console.error, 'BackgroundGeo', 'start', []);
+    start: function (success, error) {
+        cordova.exec(success, error, 'BackgroundGeo', 'start', []);
     },
-    end: function () {
-        cordova.exec(console.log, console.error, 'BackgroundGeo', 'stop', []);
+    stop: function (success, error) {
+        cordova.exec(success, error, 'BackgroundGeo', 'stop', []);
     }
-}
+};
