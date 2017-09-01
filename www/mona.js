@@ -4,5 +4,8 @@ module.exports = {
     },
     stop: function (success, error) {
         cordova.exec(success, error, 'BackgroundGeo', 'stop', []);
+    },
+    getPoints: function (success, error) {
+        cordova.exec(success, error, 'BackgroundGeo', 'getPoints', []);
     }
 };
