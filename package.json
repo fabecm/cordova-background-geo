@@ -1,6 +1,6 @@
 {
   "name": "cordova-background-geo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Cordova Background Geolocation",
   "cordova": {
     "id": "cordova-background-geo",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+http://pansetta.crispybacon.it/mobile/cordova-background-geolocation"
+    "url": "git+http://pansetta.crispybacon.it/mobile/plugin-background-geo"
   },
   "keywords": [],
   "engines": [
