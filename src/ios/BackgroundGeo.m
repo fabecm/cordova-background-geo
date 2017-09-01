@@ -46,6 +46,7 @@
 
 - (void)getPoints:(CDVInvokedUrlCommand*)command
 {
+    commandMain = command;
     CDVPluginResult* pluginResult = nil;
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:points];
     [pluginResult setKeepCallbackAsBool:YES];

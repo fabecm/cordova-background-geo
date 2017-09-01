@@ -1,6 +1,6 @@
 {
   "name": "cordova-background-geo",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Cordova Background Geolocation",
   "cordova": {
     "id": "cordova-background-geo",
