@@ -46,10 +46,10 @@ public class BackgroundGeo extends CordovaPlugin {
         }
         else if (action.equals("getPoints")){
             ArrayList<String> points =  myCampyLocationManager.getPoints();
-            ArrayList<JSONObject> pointsObject = new ArrayList<JSONObject>();
+            JSONArray pointsObject = new JSONArray();
             for(String json : points){
                 try {
-                    pointsObject.add(new JSONObject(json));
+                    pointsObject.put(new JSONObject(json));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
