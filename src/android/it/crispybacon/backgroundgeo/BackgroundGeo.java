@@ -54,7 +54,7 @@ public class BackgroundGeo extends CordovaPlugin {
                     e.printStackTrace();
                 }
             }
-            result = new PluginResult(PluginResult.Status.OK, (ArrayList<JSONObject>) pointsObject);
+            PluginResult result = new PluginResult(PluginResult.Status.OK, (ArrayList<JSONObject>) pointsObject);
             result.setKeepCallback(true);
             callbackContext.sendPluginResult(result);
         }
