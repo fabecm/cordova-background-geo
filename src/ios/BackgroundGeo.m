@@ -14,10 +14,12 @@
 @implementation BackgroundGeo{
     CLLocationManager *locationManager;
     CDVInvokedUrlCommand *commandMain;
+    NSMutableArray *points;
 }
 
 - (void)start:(CDVInvokedUrlCommand*)command
 {
+    points = [[NSMutableArray alloc] init];
     commandMain = command;
     // Create a location manager object
     locationManager = [[CLLocationManager alloc] init];
@@ -42,6 +44,12 @@
     
 }
 
+- (NSMutableArray *)getPoints:(CDVInvokedUrlCommand*)command
+{
+    return points;
+    
+}
+
 -(void)locationManager:(CLLocationManager *)manager
     didUpdateLocations:(NSArray *)locations {
     CLLocation * currentLocation = [locations lastObject];
@@ -49,13 +57,16 @@
     NSString * longitude = [NSString stringWithFormat:@"%.6f", currentLocation.coordinate.longitude];
     NSString * accuracy = [NSString stringWithFormat:@"%.6f", currentLocation.horizontalAccuracy];
     NSString * altitude = [NSString stringWithFormat:@"%.6f", currentLocation.altitude];
+    int timestamp = [[NSDate date] timeIntervalSince1970];
+
     NSLog([NSString stringWithFormat:@"didUpdateLocations: %@, %@",latitude,longitude]);
     NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc] init];
     [myDictionary setObject:[NSNumber numberWithDouble:[latitude doubleValue]] forKey:@"lat"];
     [myDictionary setObject:[NSNumber numberWithDouble:[longitude doubleValue]] forKey:@"long"];
     [myDictionary setObject:[NSNumber numberWithDouble:[accuracy doubleValue]] forKey:@"accuracy"];
     [myDictionary setObject:[NSNumber numberWithDouble:[altitude doubleValue]] forKey:@"altitude"];
-
+    [myDictionary setObject:[NSNumber numberWithInt:timestamp] forKey:@"timestamp"];
+    
     NSError * err;
     NSData * jsonData = [NSJSONSerialization dataWithJSONObject:myDictionary options:0 error:&err];
     NSString *myString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -63,6 +74,7 @@
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:myDictionary];
     [pluginResult setKeepCallbackAsBool:YES];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:commandMain.callbackId];
+    [points addObject:myDictionary];
 }
 
 
