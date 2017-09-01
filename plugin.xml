@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-background-geo" version="0.0.1">
-    <name>OpenNative</name>
-    <description>Open native activity</description>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-background-geo" version="0.1.0">
+    <name>Background Geolocation</name>
+    <description>Recover geolocation in background</description>
     <license>Apache 2.0</license>
     <author>Brusso Russo</author>
     <keywords>cordova,opennative</keywords>
