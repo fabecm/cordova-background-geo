@@ -44,9 +44,13 @@
     
 }
 
-- (NSMutableArray *)getPoints:(CDVInvokedUrlCommand*)command
+- (void)getPoints:(CDVInvokedUrlCommand*)command
 {
-    return points;
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:points];
+    [pluginResult setKeepCallbackAsBool:YES];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:commandMain.callbackId];
+    
     
 }
 

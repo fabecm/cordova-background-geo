@@ -13,7 +13,6 @@
 
 - (void)start:(CDVInvokedUrlCommand*)command;
 - (void)stop:(CDVInvokedUrlCommand*)command;
-- (NSMutableArray *)getPoints:(CDVInvokedUrlCommand*)command;
-
+- (void)getPoints:(CDVInvokedUrlCommand*)command;
 
 @end
