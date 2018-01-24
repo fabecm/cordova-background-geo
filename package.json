@@ -1,7 +1,44 @@
 {
-  "name": "cordova-background-geo",
-  "version": "0.8.0",
-  "description": "Cordova Background Geolocation",
+  "_args": [
+    [
+      {
+        "raw": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+        "spec": "ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+        "type": "git"
+      },
+      "/Users/fabio/Progetti/campagnolo/node_modules"
+    ]
+  ],
+  "_from": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+  "_id": "cordova-background-geo@0.8.0",
+  "_inCache": true,
+  "_location": "/cordova-background-geo",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+    "spec": "ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+    "type": "git"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git#db3e6f8dd7d0b3eda6dc48c8b062ab479a8df3d4",
+  "_shasum": "922e4af5dd7fb11c01c3bc914bccb6ddae71d73f",
+  "_shrinkwrap": null,
+  "_spec": "git+ssh://git@pansetta.crispybacon.it:mobile/plugin-background-geo.git",
+  "_where": "/Users/fabio/Progetti/campagnolo/node_modules",
+  "author": {
+    "name": "CrispyBacon"
+  },
   "cordova": {
     "id": "cordova-background-geo",
     "platforms": [
@@ -9,17 +46,24 @@
       "ios"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+http://pansetta.crispybacon.it/mobile/plugin-background-geo"
-  },
-  "keywords": [],
+  "dependencies": {},
+  "description": "Cordova Background Geolocation",
+  "devDependencies": {},
   "engines": [
     {
       "name": "cordova",
       "version": ">=3.0.0"
     }
   ],
-  "author": "CrispyBacon",
-  "license": "Apache-2.0"
+  "gitHead": "db3e6f8dd7d0b3eda6dc48c8b062ab479a8df3d4",
+  "keywords": [],
+  "license": "Apache-2.0",
+  "name": "cordova-background-geo",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+http://pansetta.crispybacon.it/mobile/plugin-background-geo"
+  },
+  "version": "0.8.0"
 }

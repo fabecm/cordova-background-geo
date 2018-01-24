@@ -23,17 +23,16 @@
     commandMain = command;
     // Create a location manager object
     locationManager = [[CLLocationManager alloc] init];
+    locationManager.allowsBackgroundLocationUpdates = true;
     
     // Set the delegate
     locationManager.delegate = self;
     
     // Request location authorization
-    [locationManager requestWhenInUseAuthorization];
+    [locationManager requestAlwaysAuthorization];
     
     // Start location updates
     [locationManager startUpdatingLocation];
-
-    
 }
 
 - (void)stop:(CDVInvokedUrlCommand*)command

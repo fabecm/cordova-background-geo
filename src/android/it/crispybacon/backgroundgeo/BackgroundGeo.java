@@ -29,6 +29,8 @@ public class BackgroundGeo extends CordovaPlugin {
     CallbackContext callbackContext;
 
    String [] permissions = { Manifest.permission.ACCESS_FINE_LOCATION };
+   boolean started = false;
+
 
    public boolean execute(String action, JSONArray args,final CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
@@ -38,11 +40,13 @@ public class BackgroundGeo extends CordovaPlugin {
             if(hasPermisssion())
                 startListener();
             else {
+                started = false;
                 PermissionHelper.requestPermissions(this, 0, permissions);
             }
         }
         else if (action.equals("stop")){
-            myCampyLocationManager.stoptListenerLocationChange();
+           started = false;
+            myCampyLocationManager.stopListenerLocationChange();
         }
         else if (action.equals("getPoints")){
             ArrayList<String> points =  myCampyLocationManager.getPoints();
@@ -63,6 +67,7 @@ public class BackgroundGeo extends CordovaPlugin {
 
    public void startListener(){
         Log.i("PLUGIN_BACKGROUND_GEO", "startListenerLocationChange");
+       started = true;
         myCampyLocationManager.startListenerLocationChange(new MyCampyLocationManager.MyCampyLocationListener() {
             @Override
             public void onLocationChange(String json) {
@@ -114,4 +119,12 @@ public class BackgroundGeo extends CordovaPlugin {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i("BackgroundGeo","onDestroy");
+        if(started && myCampyLocationManager!=null){
+            myCampyLocationManager.stopListenerLocationChange();
+        }
+    }
 }
