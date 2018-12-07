@@ -1,7 +1,7 @@
 repositories{    
   jcenter()
   flatDir{
-      dirs 'src/android/libs'
+      dirs 'src/main/libs'
    }
 }
 
@@ -9,5 +9,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:11.8.0'
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.android.support:appcompat-v7:26.0.1'
-    compile(name:'tslocationmanager', ext:'aar')
+    compile(name:'PluginLocationMyCampyAndroid', ext:'aar')
 }

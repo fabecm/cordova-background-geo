@@ -40,7 +40,7 @@
             </feature>
         </config-file>
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-        <resource-file src="src/android/libs/PluginLocationMyCampyAndroid.aar" target="src/android/libs/PluginLocationMyCampyAndroid.aar" />
+        <resource-file src="src/android/libs/PluginLocationMyCampyAndroid.aar" target="libs/PluginLocationMyCampyAndroid.aar" />
         <source-file src="src/android/it/crispybacon/backgroundgeo/BackgroundGeo.java" target-dir="src/android/it/crispybacon/backgroundgeo"/>
    </platform>
 </plugin>

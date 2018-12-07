@@ -1,7 +1,7 @@
 repositories{    
   jcenter()
   flatDir{
-      dirs 'src/android/libs'
+      dirs 'src/main/libs'
    }
 }
 
